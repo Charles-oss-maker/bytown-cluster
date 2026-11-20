@@ -1,5 +1,55 @@
-NAME                          READY   STATUS    RESTARTS   AGE
-bytown-web-79559d4cb5-5k57c   1/1     Running   0          17s
-bytown-web-79559d4cb5-n5dxl   1/1     Running   0          2m44s
-bytown-web-79559d4cb5-rkb99   1/1     Running   0          2m44s
-bytown-web-79559d4cb5-t2swp   1/1     Running   0          2m44s
+Name:                   bytown-web
+Namespace:              default
+CreationTimestamp:      Fri, 20 Nov 2026 15:10:55 -0500
+Labels:                 <none>
+Annotations:            deployment.kubernetes.io/revision: 5
+Selector:               app=bytown-web
+Replicas:               4 desired | 4 updated | 4 total | 4 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=bytown-web
+  Containers:
+   web:
+    Image:         bytown-web:1.0
+    Port:          80/TCP
+    Host Port:     0/TCP
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  bytown-web-5b8dcdf598 (0/0 replicas created), bytown-web-6b5d8df6d4 (0/0 replicas created)
+NewReplicaSet:   bytown-web-79559d4cb5 (4/4 replicas created)
+Events:
+  Type    Reason             Age                  From                   Message
+  ----    ------             ----                 ----                   -------
+  Normal  ScalingReplicaSet  53m                  deployment-controller  Scaled up replica set bytown-web-5b8dcdf598 from 0 to 4
+  Normal  ScalingReplicaSet  50m                  deployment-controller  Scaled down replica set bytown-web-5b8dcdf598 from 4 to 3
+  Normal  ScalingReplicaSet  50m                  deployment-controller  Scaled down replica set bytown-web-5b8dcdf598 from 3 to 2
+  Normal  ScalingReplicaSet  50m                  deployment-controller  Scaled down replica set bytown-web-5b8dcdf598 from 2 to 1
+  Normal  ScalingReplicaSet  50m                  deployment-controller  Scaled down replica set bytown-web-5b8dcdf598 from 1 to 0
+  Normal  ScalingReplicaSet  35m                  deployment-controller  Scaled up replica set bytown-web-5b8dcdf598 from 1 to 2
+  Normal  ScalingReplicaSet  35m                  deployment-controller  Scaled down replica set bytown-web-79559d4cb5 from 4 to 3
+  Normal  ScalingReplicaSet  35m                  deployment-controller  Scaled up replica set bytown-web-5b8dcdf598 from 0 to 1
+  Normal  ScalingReplicaSet  35m                  deployment-controller  Scaled up replica set bytown-web-5b8dcdf598 from 3 to 4
+  Normal  ScalingReplicaSet  35m                  deployment-controller  Scaled down replica set bytown-web-79559d4cb5 from 2 to 1
+  Normal  ScalingReplicaSet  35m                  deployment-controller  Scaled down replica set bytown-web-79559d4cb5 from 3 to 2
+  Normal  ScalingReplicaSet  35m                  deployment-controller  Scaled up replica set bytown-web-5b8dcdf598 from 2 to 3
+  Normal  ScalingReplicaSet  35m                  deployment-controller  Scaled down replica set bytown-web-79559d4cb5 from 1 to 0
+  Normal  ScalingReplicaSet  35m                  deployment-controller  Scaled up replica set bytown-web-6b5d8df6d4 from 0 to 1
+  Normal  ScalingReplicaSet  35m (x7 over 35m)    deployment-controller  (combined from similar events): Scaled down replica set bytown-web-5b8dcdf598 from 1 to 0
+  Normal  ScalingReplicaSet  2m12s (x2 over 50m)  deployment-controller  Scaled up replica set bytown-web-79559d4cb5 from 0 to 1
+  Normal  ScalingReplicaSet  2m12s (x2 over 50m)  deployment-controller  Scaled up replica set bytown-web-79559d4cb5 from 1 to 2
+  Normal  ScalingReplicaSet  2m12s                deployment-controller  Scaled down replica set bytown-web-6b5d8df6d4 from 4 to 3
+  Normal  ScalingReplicaSet  2m10s (x2 over 50m)  deployment-controller  Scaled up replica set bytown-web-79559d4cb5 from 2 to 3
+  Normal  ScalingReplicaSet  2m10s (x2 over 50m)  deployment-controller  Scaled up replica set bytown-web-79559d4cb5 from 3 to 4
+  Normal  ScalingReplicaSet  2m10s                deployment-controller  Scaled down replica set bytown-web-6b5d8df6d4 from 3 to 2
+  Normal  ScalingReplicaSet  2m10s                deployment-controller  Scaled down replica set bytown-web-6b5d8df6d4 from 2 to 1
+  Normal  ScalingReplicaSet  2m9s                 deployment-controller  Scaled down replica set bytown-web-6b5d8df6d4 from 1 to 0
