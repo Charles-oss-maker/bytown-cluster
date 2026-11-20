@@ -1,3 +1,0 @@
-Q1: Swarm and Kubernetes automatically created replacements to keep the required number of running copies.
-Q2: Docker Swarm is easier to manage. K3s is lighter and uses fewer resources than full Kubernetes.
-Q3: The old containers kept running while the new ones started, so the website stayed online
