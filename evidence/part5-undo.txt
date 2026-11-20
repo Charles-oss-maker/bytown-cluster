@@ -1,2 +1,26 @@
-<h1>Bytown NetOps</h1>
-<p>Seed: 11</p>
+=== Rollout history ===
+deployment.apps/bytown-web 
+REVISION  CHANGE-CAUSE
+3         <none>
+4         <none>
+5         <none>
+
+=== Current deployment image ===
+bytown-web:1.0
+=== Rollout status ===
+deployment "bytown-web" successfully rolled out
+deployment.apps/bytown-web with revision #5
+Pod Template:
+  Labels:	app=bytown-web
+	pod-template-hash=79559d4cb5
+  Containers:
+   web:
+    Image:	bytown-web:1.0
+    Port:	80/TCP
+    Host Port:	0/TCP
+    Environment:	<none>
+    Mounts:	<none>
+  Volumes:	<none>
+  Node-Selectors:	<none>
+  Tolerations:	<none>
+
